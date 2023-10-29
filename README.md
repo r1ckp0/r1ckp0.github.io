@@ -1,1 +1,0 @@
-# r1ckp0.github.io
