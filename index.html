@@ -1,19 +1,103 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<style>
-body {
-  font-family: 'Brush Script MT', cursive;
-background-color: black;
-}
-h1, p {
-color: white;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ricardo pastor - portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-<h1>rickpo</h1>
-<p><a href="./yo"> yo </a></p>
-<p><a href="./links"> links </a></p>
-<p><a href="./contacto"> contacto </a></p>
-</body></html>
+    <header>
+        <div class="container">
+            <h1>Ricardo Pastor</h1>
+            <nav>
+                <a href="#about">about me</a>
+                <a href="#projects">projects</a>
+                <a href="#contact">contact me</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="container" style="padding-top: 100px;">
+        <h2 >about me</h2>
+        <p>
+            I like to work with music and sound. Although in the last years I've been getting more into other forms of expression, I'm currently focused on performing as a violinist and on the project "Rickpo" in which I sing and produce, mixing genres of popular music like EDM, pop or hip-hop.
+        </p>
+        
+        <p>
+            Things that inspire me: fantasy books, old consoles, sad manga, pokémon, objective realism of the last century and table tennis, among many other things. People who know me would probably define me as reserved, and it is the artistic practices in which I get involved my (only) means of expression, and they are what brings me happiness, what causes me frustration, what helps me in difficult moments and what connects me with more people.
+        </p>
+        
+        <p>
+            Something that is always in my practices is what I have decided to call "sound okonomiyaki". Okonomiyaki is a Japanese dish and roughly translates to "the things you like fried". That's something I look for when I'm creating or performing: to celebrate my background and my influences and fry them (artistically).
+        </p>
+        
+        
+    </section>
+
+    <section id="projects" class="container">
+        <h2>projects</h2>
+        <div class="project">
+            <h3><a href="rickpo.html">Rickpo</a></h3>
+            <p>It's like pop music but weird (ok, kind of weird).</p>
+        </div> 
+        <div class="project">
+            <h3><a href="escenas1.html">Escenas I</a></h3>
+            <p>Work for violin and fixed media.</p>
+        </div>
+        <!-- Añade más proyectos según sea necesario -->
+    </section>
+
+    <section id="education" class="container">
+        <h2>education</h2>
+        <p>
+            CSKG (Madrid)
+            <li style="text-align: left;">BA in Violin (Classical performance)</li>
+            <li style="text-align: left;">Postgraduate diploma in Violin (Classical performance)*</li>
+            <li style="text-align: left;">MA in Electroacoustic Composition*</li>
+
+        </p>
+        <p id="asterisco">* the program ends in September of 2024</p>
+        <!-- Añade más proyectos según sea necesario -->
+    </section>
+
+    <section id="contact" class="container">
+        <h2>contact me</h2>
+        <div>phone: +34 644 387 323</div>
+        <div>
+            <span>email:</span>
+            <a style="padding-right: 10px;" href="mailto:pastorperez.ricardo@gmail.com">pastorperez.ricardo@gmail.com</a>
+        <button id="copyButton">Copy</button></div>
+        <span id="copyMessage" style="display:none;">Copied ^.^ </span>
+    </section>
+
+
+
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function() {
+            // El email a copiar
+            const email = 'pastorperez.ricardo@gmail.com';
+            
+            // Crear un campo de texto temporal para copiar el texto
+            const tempInput = document.createElement('input');
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Mostrar mensaje de confirmación
+            const copyMessage = document.getElementById('copyMessage');
+            copyMessage.style.display = 'inline';
+            
+            // Ocultar el mensaje después de 2 segundos
+            setTimeout(function() {
+                copyMessage.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
+
+
